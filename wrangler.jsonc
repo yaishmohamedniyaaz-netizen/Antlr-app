@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Cloudflare Workers static assets: serves the built app from ./dist.
+  // "single-page-application" sends any unknown path (like /sales) to index.html, so the app's own router handles it.
+  "name": "antlr-app",
+  "compatibility_date": "2026-11-24",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
